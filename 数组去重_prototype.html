@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset= "UTF-8">
+
+<style>
+
+#div1 {height:200px;background:#ccc;}
+</style>
+
+</head>
+
+<body>
+
+<div id="div1">
+	
+</div>
+
+
+
+<script>
+
+Array.prototype.unique=function(){
+	for(var i=0; i<this.length; i++){
+		for(var j=i+1; j<this.length; j++){
+			if(this[i]==this[j]){
+				this.splice(j--,1);
+			}
+		}
+	}
+}
+
+var arr=[12,4,6,12,7,6,12,3,3,3,7];
+
+arr.unique();
+document.write(arr);
+
+
+</script>
+
+
+
+
+</body>
+</html> 
