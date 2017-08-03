@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset= "UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">     
+
+<style>
+
+#div1{
+	width:100px; height:100px; 
+	background:#ccc; position:absolute;
+	left:0; top:0;
+	text-align:center; line-height:200px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="div1">
+	xxx
+</div>
+
+
+
+
+<script>
+var oDiv=document.getElementById('div1');
+
+oDiv.addEventListener('touchstart',function(ev){
+	var disX=ev.targetTouches[0].pageX-oDiv.offsetLeft;
+	var disY=ev.targetTouches[0].pageY-oDiv.offsetTop;
+
+	function fnMove(ev){
+		oDiv.style.left=ev.targetTouches[0].pageX-disX+'px';
+		oDiv.style.top=ev.targetTouches[0].pageY-disY+'px';
+	};
+
+	function fnEnd(){
+		oDiv.removeEventListener('touchmove',fnMove,false);
+		oDiv.removeEventListener('touchend',fnEnd,false);
+	}
+
+	oDiv.addEventListener('touchmove',fnMove,false);
+	oDiv.addEventListener('touchend',fnEnd,false);
+	ev.preventDefault();
+},false);
+
+
+
+
+
+
+</script>
+
+</body>
+</html> 
