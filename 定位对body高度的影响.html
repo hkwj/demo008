@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset= "UTF-8">
+
+<style>
+body{
+	background:#ccc;
+}
+#div1{
+	width:200px; height:200px; background:red;
+	/*position:absolute;*/
+}
+
+</style>
+<script>
+window.onload=function(){
+	document.onclick=function(){
+		alert('document');
+	};
+	var div=document.getElementsByTagName('div')[0];
+	var body=document.getElementsByTagName('body')[0];
+	alert(div.clientHeight);
+	alert(body.clientHeight);
+}
+
+
+
+
+
+</script>
+</head>
+<body onclick="alert('body')">
+
+<div id="div1" onclick="alert('div1')">
+	<input type="button" value="button" id="btn1" onclick="alert('button')">
+</div>
+
+
+
+</body>
+</html> 
