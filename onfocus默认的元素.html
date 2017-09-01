@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset= "UTF-8">
+
+<style>
+li{
+	background:#ccc; margin:3px;
+}
+
+</style>
+<script>
+
+window.onload=function(){
+	var oBtn=document.getElementById('btn1');
+	//var oBtn=document.getElementById('btn2');
+	oBtn.onfocus=function(){
+		alert('onfocus');
+	};
+	oBtn.onblur=function(){
+		alert('onblur');
+	}
+}
+
+
+
+</script>
+</head>
+<body>
+
+
+<input type="button" value="按钮" id="btn1" title="abc" name="222">
+<input type="button" value="按钮" id="btn2" title="abc" name="222">
+
+
+
+
+</body>
+</html> 
