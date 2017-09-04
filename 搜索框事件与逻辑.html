@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset= "UTF-8">
+
+<style>
+
+
+</style>
+<script>
+window.onload=function(){
+	var oT1=document.getElementById('t1');
+	oT1.onfocus=function(){
+		if(oT1.value=="默认值"){
+			oT1.value='';
+		}
+	};
+
+	oT1.onblur=function(){
+		if(oT1.value==''){
+			if(oT1.value==''){
+				oT1.value='默认值';
+			}
+		}
+	};
+}
+
+</script>
+</head>
+<body>
+
+<input type="text" value="默认值" id="t1">
+<input type="button" value="search">
+
+
+
+
+</body>
+</html> 
