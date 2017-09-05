@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset= "UTF-8">
+
+<style>
+
+</style>
+<script>
+window.onload=function(){
+	document.body.onclick=function(e){
+		alert('body');
+		window.event? window.event.cancelBubble = true : e.stopPropagation();
+		window.event? window.event.cancelBubble =true : e.stopPropagation();
+	};
+
+	document.onclick=function(){
+		alert('document');
+	};
+	alert(document==document.body.parentNode.parentNode);
+}
+
+</script>
+</head>
+<body>
+
+<div style="background:#ccc">box</div>
+
+</body>
+</html> 
