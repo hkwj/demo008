@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset= "UTF-8">
+
+<style>
+div{
+	width:300px; height:200px;
+	background:#000; font:50px/200px "songti";
+	color:#fff; text-align:center; display:none;
+}
+div:target{
+	display:block;
+}
+/* 这个并没有那么好用 每一个target点击后 永久的变成了block 而且貌似只执行一次 不如在js中控制*/
+
+
+</style>
+<script>
+	window.onload=function(){
+		var aA=document.querySelectorAll('a');
+		var aDiv=document.querySelectorAll('div');
+		for(var i=0; i<aA.length; i++){
+			aA[i].index=i;
+			aA[i].onmouseout=function(){
+				aDiv[this.index].style.display="none";
+			}
+		}
+	}
+</script>
+</head>
+<body>
+
+
+<a href="#div1">div1</a>
+<a href="#div2">div2</a>
+<a href="#div3">div3</a>
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+<div id="div3">div3</div>
+
+
+</body>
+</html> 
